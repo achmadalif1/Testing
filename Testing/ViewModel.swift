@@ -25,7 +25,7 @@ final class HomeSearchViewModel{
         do {
           let response = try decoder.decode(RootRawg.self, from: data)
             self.result.value = response.results
-            self.isLoading.value = true
+            self.isLoading.value = false
         } catch {
             self.errorMessage.value = error.localizedDescription
             self.isLoading.value = false
